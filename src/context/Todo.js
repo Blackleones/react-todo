@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useContext, useReducer } from 'react'
 import todoReducer, { TODO_ACTION } from './todoReducer'
 
 //initial state
@@ -9,6 +9,10 @@ const initialState = {
 
 //create context
 export const TodoContext = React.createContext(initialState)
+
+export function useTodoContext() {
+    return useContext(TodoContext)
+}
 
 //create context provider
 /*

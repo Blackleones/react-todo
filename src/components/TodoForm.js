@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { TodoContext } from '../context/Todo';
+import React, { useEffect, useState } from 'react'
+import { useTodoContext } from '../context/Todo';
 
 function TodoForm() {
-    const { addTodo, updateTodo, editTodoId, editTodo, todos } = useContext(TodoContext)
+    const { addTodo, updateTodo, editTodoId, editTodo, todos } = useTodoContext()
     const [text, setText] = useState('');
     
     useEffect(() => {

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { TodoContext } from '../context/Todo'
+import React from 'react'
+import { useTodoContext } from '../context/Todo'
 import Todo from './Todo'
 
 export const TodoList = () => {
-    const { todos } = useContext(TodoContext)
+    const { todos } = useTodoContext()
   
     return (
         <div className="m-3">
